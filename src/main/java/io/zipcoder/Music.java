@@ -14,26 +14,32 @@ public class Music {
     }
 
     public Integer selection(Integer startIndex, String selection) {
-            if(playList[startIndex]==selection){
-                return 0;
-            }
+        int num = 0;
+        int num2 = 0;
+        int right = 0;
 
-            for (int x=startIndex; x<playList.length;x++){
-                if(playList[x] == selection){
+
+            for (int x = startIndex; x<playList.length;x++){
+
+                    num++;
+            }
                     //store x as variable
-                }
-            }
+
             for (int y=startIndex; y>=0;y--){
-                if(playList[y] == selection){
+
+                    num2++;
                     //store y as another variable;
-                }
+
             }
+            if(num > num2){
+                return num2;
+            } else return num;
 
             // if x>y == return y
             // if y > x == return x
 
+// no need for an array list; 
 
-      return 0;
 
 
 
